@@ -38,12 +38,10 @@ class OpenAIService
 
         $response = json_decode($completion, true);
 
-        try {
-            $result = stripslashes($response['choices'][0]['text']);
-        } catch (Exception $exception) {
+        if (!isset($response['choices'][0]['text'])) {
             throw new RuntimeException($response['error']['message']);
         }
 
-        return trim($result);
+        return trim($response['choices'][0]['text']);
     }
 }

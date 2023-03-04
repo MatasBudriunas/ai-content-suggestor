@@ -1,10 +1,27 @@
 <template>
-    How To Install Vue 3 in Laravel 9 with Vite
+    <div>
+        <h1>{{ output }}</h1>
+    </div>
 </template>
 
 <script>
 export default {
-    name: "App.vue"
+    name: "App.vue",
+    data() {
+        return {
+            output: null,
+        }
+    },
+    created() {
+        this.getAIResponse();
+    },
+    methods: {
+        getAIResponse() {
+            axios.get('/api/completion').then((resp) => {
+                this.output = resp.data.output
+            });
+        }
+    }
 }
 </script>
 
