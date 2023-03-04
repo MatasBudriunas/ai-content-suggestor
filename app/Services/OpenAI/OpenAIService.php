@@ -6,6 +6,7 @@ namespace App\Services\OpenAI;
 
 use Exception;
 use Orhanerday\OpenAi\OpenAi;
+use RuntimeException;
 
 class OpenAIService
 {
@@ -31,6 +32,12 @@ class OpenAIService
 
         $response = json_decode($completion, true);
 
-        return json_decode(stripslashes($response['choices'][0]['text']));
+        try {
+            $result = stripslashes($response['choices'][0]['text']);
+        } catch (Exception $exception) {
+            throw new RuntimeException($response['error']['message']);
+        }
+
+        return $result;
     }
 }

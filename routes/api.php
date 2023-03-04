@@ -18,4 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/completion', 'API\OpenAIController@index');
+Route::get('/completion', 'App\Http\Controllers\API\OpenAIController@index');
