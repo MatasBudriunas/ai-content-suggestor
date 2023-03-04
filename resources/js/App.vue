@@ -1,14 +1,14 @@
 <template>
     <b-container>
-            <div class="form-group">
-                <label for="questionInput">Ask a question for content generation: </label>
-                <input class="form-control" id="questionInput"
-                       v-model="input"
-                       type="text"
-                       required
-                >
-                <button class="btn btn-primary" @click="getAIResponse">Submit</button>
-            </div>
+        <div class="form-group">
+            <label for="questionInput">Ask a question for content generation: </label>
+            <input class="form-control" id="questionInput"
+                   v-model="input"
+                   type="text"
+                   required
+            >
+            <button class="btn btn-primary" @click="getAIResponse">Submit</button>
+        </div>
     </b-container>
     <div v-if="answerProvided" class="answer-block">
         {{ output }}
