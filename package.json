@@ -13,6 +13,10 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^4.0.0",
+        "bootstrap": "^5.2.3",
+        "bootstrap-vue": "^2.23.1",
+        "jquery": "^3.6.3",
+        "popper.js": "^1.16.1",
         "vue": "^3.2.36",
         "vue-loader": "^17.0.1"
     }
