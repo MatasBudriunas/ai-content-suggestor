@@ -24,7 +24,11 @@ export default {
     },
     methods: {
         getAIResponse() {
-            axios.get('/api/completion').then((resp) => {
+            axios.get('/api/completion', {
+                params: {
+                    input: this.input
+                }
+            }).then((resp) => {
                 this.output = resp.data.output
             });
 
@@ -35,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-    .question-block, .answer-block {
-        text-align: center;
-    }
+.question-block, .answer-block {
+    text-align: center;
+}
 </style>

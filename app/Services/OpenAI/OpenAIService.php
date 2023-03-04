@@ -18,19 +18,20 @@ class OpenAIService
 
     private OpenAi $openAi;
 
-    public function __construct(OpenAi $openAi){
+    public function __construct(OpenAi $openAi)
+    {
         $this->openAi = $openAi;
     }
 
     /**
      * @throws Exception
      */
-    public function getCompletion(): string
+    public function getCompletion(string $prompt): string
     {
         $completion = $this->openAi->completion([
             'model' => self::DEFAULT_MODEL,
             'max_tokens' => self::DEFAULT_MAX_TOKENS,
-            'prompt' => 'Is the sky blue?',
+            'prompt' => $prompt,
             'temperature' => self::DEFAULT_TEMPERATURE,
             'frequency_penalty' => self::DEFAULT_FREQUENCY_PENALTY,
             'presence_penalty' => self::DEFAULT_PRESENCE_PENALTY
