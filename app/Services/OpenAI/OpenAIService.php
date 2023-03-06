@@ -14,7 +14,7 @@ class OpenAIService
     private const DEFAULT_TEMPERATURE = 0.9;
     private const DEFAULT_FREQUENCY_PENALTY = 0;
     private const DEFAULT_PRESENCE_PENALTY = 0.6;
-    private const DEFAULT_MAX_TOKENS = 50;
+    private const DEFAULT_MAX_TOKENS = 150;
 
     private OpenAi $openAi;
 
