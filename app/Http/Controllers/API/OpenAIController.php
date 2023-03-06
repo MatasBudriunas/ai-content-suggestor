@@ -9,7 +9,7 @@ use App\Http\Requests\OpenAIRequest;
 use App\Services\OpenAI\OpenAIService;
 use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Response;
+use Symfony\Component\HttpFoundation\Response;
 
 class OpenAIController extends Controller
 {
