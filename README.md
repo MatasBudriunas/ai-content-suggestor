@@ -1,3 +1,7 @@
+# ai-content-suggestor
+
+A web-application using openAI library, providing AI-generated content suggestions.
+
 ## Requirements
 
 Composer 2+ : https://getcomposer.org/ <br/>
