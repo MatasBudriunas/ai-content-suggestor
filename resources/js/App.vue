@@ -1,7 +1,3 @@
-<script setup>
-import {RingLoader} from "vue3-spinner";
-</script>
-
 <template>
     <b-container>
         <div class="form-group">
@@ -12,9 +8,6 @@ import {RingLoader} from "vue3-spinner";
                    required
             >
             <button class="btn btn-primary" @click="getAIResponse">Submit</button>
-        </div>
-        <div v-if="loading">
-            <RingLoader />
         </div>
     </b-container>
     <div v-if="output" class="output">
@@ -59,6 +52,7 @@ export default {
     margin: 0 auto;
     max-width: 50%;
 }
+
 .question {
     font-family: Baskervville, serif;
     font-size: 1.5rem;
@@ -68,11 +62,12 @@ export default {
     justify-items: center;
     text-align: center;
 }
+
 .btn-primary {
     display: block;
-    justify-items: center;
     margin: 1rem auto;
 }
+
 .output {
     font-family: Baskervville, serif;
     font-size: 1.2rem;
