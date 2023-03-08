@@ -8,6 +8,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+@include('navbar')
 <div id="app"></div>
 
 @vite('resources/js/app.js')

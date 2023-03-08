@@ -8,8 +8,9 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+@include('navbar')
 <div id="profile"></div>
 
-@vite('resources/js/app.js')
+@vite('resources/js/profile.js')
 </body>
 </html>
