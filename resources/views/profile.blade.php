@@ -6,6 +6,7 @@
     <title>Profile</title>
 
     @vite('resources/css/app.css')
+    @vite('resources/css/profile.css')
 </head>
 <body>
 @include('navbar')

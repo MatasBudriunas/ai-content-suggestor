@@ -1,0 +1,17 @@
+h2 {
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
+    font-family: Tahoma, Verdana, serif;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    max-width: 600px;
+}
+
+.experience-output, .skills-output {
+    float: right;
+    margin-top: 5px;
+}
