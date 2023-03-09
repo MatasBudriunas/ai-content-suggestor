@@ -1,6 +1,6 @@
 h2 {
     border-bottom: 4px solid #dfdfe2;
-    margin-top: 0;
+    margin-top: 2rem;
     padding-top: 60px;
     font-family: Tahoma, Verdana, serif;
 }
@@ -14,4 +14,15 @@ section {
 .experience-output, .skills-output {
     float: right;
     margin-top: 5px;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.btn-generate {
+    margin-top: 1rem;
 }

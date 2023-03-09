@@ -10,10 +10,12 @@
             <DotLoader></DotLoader>
         </div>
         <div v-if="!experienceLoading && experienceOutput" class="experience-output">
-            {{ experienceOutput }}
-            <button class="btn btn-secondary"
-                    @click="getAIResponse(experience, 'experience', 'experienceOutput', 'generate')">Generate for me!
-            </button>
+            <div class="output-container">
+                {{ experienceOutput }}
+                <button class="btn btn-secondary btn-generate"
+                        @click="getAIResponse(experience, 'experience', 'experienceOutput', 'generate')">Generate for me!
+                </button>
+            </div>
         </div>
     </section>
     <section role="region" aria-labelledby="skills-description">
