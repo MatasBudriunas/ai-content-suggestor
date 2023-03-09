@@ -29,7 +29,8 @@ export default {
             this.loading = true;
             axios.get('/api/completion', {
                 params: {
-                    input: this.input
+                    input: this.input,
+                    type: null
                 }
             }).then((resp) => {
                 this.output = resp.data.output
