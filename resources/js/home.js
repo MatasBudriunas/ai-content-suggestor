@@ -5,8 +5,8 @@ import 'popper.js';
 import {createApp} from 'vue'
 import {vue3Spinner} from 'vue3-spinner'
 
-import App from './App.vue'
+import Home from './Home.vue'
 
-createApp(App)
+createApp(Home)
     .use(vue3Spinner)
-    .mount("#app")
+    .mount("#home")
