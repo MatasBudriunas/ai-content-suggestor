@@ -25,9 +25,9 @@ class OpenAIController extends Controller
      */
     public function index(OpenAIRequest $request): JsonResponse
     {
-        return response()->json(
-            [
-                'output' => $this->openAIService->getCompletion($request->get('input'))
-            ], Response::HTTP_OK);
+        return response()->json(['output' => $this->openAIService->getCompletion(
+            $request->get('input'),
+            $request->get('type')
+        )], Response::HTTP_OK);
     }
 }
