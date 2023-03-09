@@ -9,8 +9,8 @@
 </head>
 <body>
 @include('navbar')
-<div id="app"></div>
+<div id="home"></div>
 
-@vite('resources/js/app.js')
+@vite('resources/js/home.js')
 </body>
 </html>

@@ -3,7 +3,7 @@ import './bootstrap';
 import 'popper.js';
 
 import { createApp } from 'vue'
-import Profile from './profile.vue'
+import Profile from './Profile.vue'
 import {vue3Spinner} from 'vue3-spinner'
 
 const app = createApp(Profile)
