@@ -1,16 +1,26 @@
-nav {
-    display: flex;
-    justify-content: flex-end;
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-li {
-    margin: 0 10px;
+body {
+    padding-bottom: 100px;
+}
+
+.spinner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: -2rem;
+    height: 100px;
 }

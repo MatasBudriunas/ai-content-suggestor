@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './bootstrap';
 import 'popper.js';
+import 'jQuery';
 
 import { createApp } from 'vue'
 import Profile from './Profile.vue'

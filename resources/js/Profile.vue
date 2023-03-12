@@ -3,17 +3,18 @@
         <h2 id="experience-description">Experience description</h2>
         <div class="info">
             <label for="experience-description">Give us a description of your work experience</label>
-            <textarea v-model="experience" name="experience-description" rows="4" cols="60"
+            <textarea v-model="experience" name="experience-description" class="form-control w-100 bg-light"
                       @blur="getAIResponse(experience, 'experience', 'experienceOutput', 'suggest')"></textarea>
         </div>
-        <div v-if="experienceLoading && !experienceOutput">
+        <div v-if="experienceLoading && !experienceOutput" class="spinner">
             <DotLoader></DotLoader>
         </div>
         <div v-if="!experienceLoading && experienceOutput" class="experience-output">
             <div class="output-container">
                 {{ experienceOutput }}
                 <button class="btn btn-secondary btn-generate"
-                        @click="getAIResponse(experience, 'experience', 'experienceOutput', 'generate')">Generate for me!
+                        @click="getAIResponse(experience, 'experience', 'experienceOutput', 'generate')">
+                    Generate for me!
                 </button>
             </div>
         </div>
@@ -22,18 +23,15 @@
         <h2 id="skills-description">Skill description</h2>
         <div class="info">
             <label for="skill-description">Give us a description of your skills</label>
-            <textarea v-model="skills" name="skill-description" rows="4" cols="60"
+            <textarea v-model="skills" name="skill-description" class="form-control w-100 bg-light"
                       @blur="getAIResponse(skills, 'skills', 'skillsOutput', 'suggest')"></textarea>
         </div>
-        <div v-if="skillsLoading && !skillsOutput">
+        <div v-if="skillsLoading && !skillsOutput" class="spinner">
             <DotLoader></DotLoader>
-        </div>
-        <div v-if="skillsOutput" class="skills-output">
-            {{ skillsOutput }}
         </div>
         <div v-if="!skillsLoading && skillsOutput" class="skills-output">
             {{ skillsOutput }}
-            <button class="btn btn-secondary" @click="getAIResponse(skills, 'skills', 'skillsOutput', 'generate')">
+            <button class="btn btn-secondary btn-generate" @click="getAIResponse(skills, 'skills', 'skillsOutput', 'generate')">
                 Generate for me!
             </button>
         </div>

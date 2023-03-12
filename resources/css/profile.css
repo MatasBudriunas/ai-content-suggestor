@@ -14,15 +14,23 @@ section {
 .experience-output, .skills-output {
     float: right;
     margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-output {
+    margin-bottom: 4rem;
 }
 
 .output-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .btn-generate {
     margin-top: 1rem;
+    max-width: 150px;
 }
