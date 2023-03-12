@@ -13,4 +13,5 @@
 
 @vite('resources/js/home.js')
 </body>
+@include('footer')
 </html>
