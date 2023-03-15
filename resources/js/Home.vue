@@ -7,13 +7,21 @@
                    type="text"
                    required
             >
-            <button class="btn btn-primary submit-btn" @click="getAIResponse">Submit</button>
+            <button class="btn btn-outline-dark submit-btn" @click="getAIResponse">Submit</button>
         </div>
     </b-container>
+    <div v-if="loading && !output" class="spinner">
+        <DotLoader></DotLoader>
+    </div>
     <div v-if="output" class="output">
         {{ output }}
     </div>
 </template>
+
+<script setup>
+import {DotLoader} from "vue3-spinner";
+</script>
+
 <script>
 export default {
     name: "App.vue",
@@ -26,6 +34,7 @@ export default {
     },
     methods: {
         async getAIResponse() {
+            this.output = null;
             this.loading = true;
             axios.get('/api/completion', {
                 params: {
@@ -34,9 +43,8 @@ export default {
                 }
             }).then((resp) => {
                 this.output = resp.data.output
+                this.loading = false;
             });
-
-            this.loading = false;
         }
     }
 }
