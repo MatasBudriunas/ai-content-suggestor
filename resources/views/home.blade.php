@@ -6,6 +6,7 @@
     <title>AI content generator</title>
 
     @vite('resources/css/app.css')
+    @vite('resources/css/home.css')
 </head>
 <body>
 @include('navbar')
