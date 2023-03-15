@@ -9,7 +9,7 @@ use Tests\TestCase;
 
 class ProfileTest extends TestCase
 {
-    public function test_example()
+    public function test_profile_accessibility()
     {
         $response = $this->get('/profile');
 
