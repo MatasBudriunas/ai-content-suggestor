@@ -1,6 +1,6 @@
 # ai-content-suggestor
 
-A web-application using openAI library, providing AI-generated content suggestions.
+A web-application using openAI library GPT-3 model. It comes with active prompt and asynchornous prompt that generates suggestions asynchronically based on content provided.
 
 ## Requirements
 
