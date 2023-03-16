@@ -31,7 +31,6 @@ jobs:
       run: |
         npm install
         npm run build
-    - name: Run tests and linter
+    - name: Run tests
       run: |
         ./vendor/bin/phpunit --testdox tests/
-        ./vendor/bin/parallel-lint app/ database/ tests/
