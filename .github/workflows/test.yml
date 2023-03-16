@@ -23,17 +23,14 @@ jobs:
     - name: Install dependencies
       run: |
         composer install --prefer-dist
-
     - name: Set environment variables
       run: |
         echo "APP_KEY=$APP_KEY" >> $GITHUB_ENV
         echo "OPEN_AI_API_KEY=$OPEN_AI_API_KEY" >> $GITHUB_ENV
-
     - name: Build assets
       run: |
         npm install
-        npm run dev
-
+        LARAVEL_BYPASS_ENV_CHECK=1 npm run dev
     - name: Run tests and linter
       run: |
         ./vendor/bin/phpunit --testdox tests/
