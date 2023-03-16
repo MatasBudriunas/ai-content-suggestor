@@ -5,7 +5,7 @@ A web-application using openAI library GPT-3 model. It comes with active prompt 
 ## Requirements
 
 Composer 2+ : https://getcomposer.org/ <br/>
-PHP 7.4 or higher : https://www.php.net/downloads.php <br/>
+PHP 8.1 : https://www.php.net/downloads.php <br/>
 Node 18.14.2 : https://nodejs.org/en/download/ <br/>
 NPM 9.5.0 : https://www.npmjs.com/package/download <br/>
 OpenAI account with tokens and an API key : https://platform.openai.com/overview
