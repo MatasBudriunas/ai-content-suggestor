@@ -47,13 +47,17 @@ class OpenAIService
         return trim($response['choices'][0]['text']);
     }
 
-    private function generatePrompt(string $content, ?string $type): ?string
+    public function generatePrompt(string $content, ?string $type): ?string
     {
+        if ($type && !in_array($type, OpenAIConstants::PROMPT_TYPES)) {
+            throw new RuntimeException('Invalid type provided');
+        }
+
         if ($type === OpenAIConstants::PROMPT_TYPE_SUGGEST) {
             return "Provide a list of improvements for this content: $content";
         }
 
-        if($type === OpenAIConstants::PROMPT_TYPE_GENERATE) {
+        if ($type === OpenAIConstants::PROMPT_TYPE_GENERATE) {
             return "Please re-write the text using patterns that are sought out by human resources: $content";
         }
 
