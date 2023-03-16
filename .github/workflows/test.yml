@@ -21,12 +21,18 @@ jobs:
         php-version: '8.1'
 
     - name: Install dependencies
-      run: composer install --prefer-dist
+      run: |
+        composer install --prefer-dist
 
     - name: Set environment variables
       run: |
         echo "APP_KEY=$APP_KEY" >> $GITHUB_ENV
         echo "OPEN_AI_API_KEY=$OPEN_AI_API_KEY" >> $GITHUB_ENV
+
+    - name: Build assets
+      run: |
+        npm install
+        npm run dev
 
     - name: Run tests and linter
       run: |
