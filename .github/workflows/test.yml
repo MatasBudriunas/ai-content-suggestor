@@ -30,7 +30,7 @@ jobs:
     - name: Build assets
       run: |
         npm install
-        LARAVEL_BYPASS_ENV_CHECK=1 npm run dev
+        npm run build
     - name: Run tests and linter
       run: |
         ./vendor/bin/phpunit --testdox tests/
