@@ -16,8 +16,9 @@ class HomepageTest extends TestCase
         $response->assertStatus(Response::HTTP_OK);
     }
 
-    public function test_completion() {
-        $response = $this->call('GET','/api/completion', [
+    public function test_completion()
+    {
+        $response = $this->call('GET', '/api/completion', [
             'input' => 'Is the sky blue?'
         ]);
 
